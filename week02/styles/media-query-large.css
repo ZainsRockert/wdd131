@@ -1,0 +1,14 @@
+@media screen and (min-width: 500px) {
+
+    /* Header styling for larger viewports */
+    header {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    /* Main element grid layout for larger viewports */
+    main {
+        grid-template-columns: 1fr 1fr;
+        /* Two equal-sized columns */
+    }
+}

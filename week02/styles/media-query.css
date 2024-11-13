@@ -1,0 +1,36 @@
+/* Import the Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Apply Roboto font to the body */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f5;
+}
+
+/* Common styles for header, main, and footer */
+header,
+main,
+footer {
+    max-width: 640px;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    background-color: #76b4f3;
+    border-radius: 5px;
+}
+
+/* Main element grid layout */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* Section styling */
+section {
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
