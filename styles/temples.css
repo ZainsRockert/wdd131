@@ -1,0 +1,133 @@
+body {
+    font-family: "Vollkorn", serif;
+    /* font-optical-sizing: auto; */
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #d7206e;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    /* font-weight: bold; */
+    color: #ffffff;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    max-width: 760px;
+    list-style: none;
+    color: #d9d9d9;
+}
+
+.navigation ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+
+}
+
+.navigation a {
+    display: none;
+    color: #d9d9d9;
+    text-align: center;
+    font-size: 1rem;
+    padding: .5rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #000;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content: "☰";
+    color: #d9d9d9;
+}
+
+#menu.open::before {
+    content: "❎";
+}
+
+.open a {
+    display: block;
+}
+
+
+h2 {
+    display: block;
+    font-size: 3rem;
+    color: #353535;
+    margin-block-start: 1em;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    text-align: center;
+}
+
+section {
+    display: block;
+    margin: 1rem auto;
+    max-width: 940px;
+    unicode-bidi: isolate;
+    padding: 1rem;
+    background-color: #fff;
+}
+
+figure {
+    text-align: center;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+figcaption {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #284b63;
+}
+
+footer {
+    text-align: center;
+    font-weight: 400;
+    background-color: #353535;
+    font-size: 1.2rem;
+    display: block;
+    unicode-bidi: isolate;
+}
+
+footer p {
+    color: #d9d9d9;
+    line-height: 1.8em;
+}
