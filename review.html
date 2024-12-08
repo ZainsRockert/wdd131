@@ -4,25 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Mochiy+Pop+One&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles/form.css">
-    <script src="scripts/form.js" defer></script>
-    <meta name="description" content="Temple picture album">
-    <meta name="author" content="Marcos Macho">
-    <title>WDD 131 - Dynamic Web Fundamentals - forum - Marcos Macho</title>
+    <title>Review Submitted</title>
 </head>
 
 <body>
-    <main>
-        <p class="counterDisplayReview"></p>
-    </main>
-    <footer>
-        <p>&copy; <span id="currentyear"></span> | Marcos Macho | Venezuela</p>
-        <p>Last Modified <span id="lastModified"></span> </p>
-    </footer>
+    <h1>Thank you for your review!</h1>
+    <p id="review-count"></p>
+
+    <script>
+        // Get the review count from localStorage
+        let reviewCount = localStorage.getItem('reviewCount');
+
+        // If it doesn't exist, initialize to 0
+        if (!reviewCount) {
+            reviewCount = 0;
+        }
+
+        // Increment the review count
+        reviewCount++;
+        localStorage.setItem('reviewCount', reviewCount);
+
+        // Display the updated count
+        document.getElementById('review-count').textContent = `You have completed ${reviewCount} reviews.`;
+
+        // Clear form fields after submission
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+    </script>
 </body>
 
 </html>
