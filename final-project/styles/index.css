@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+#menu {
+    border: 2px soli #333;
+    background: none;
+    font-size: larger;
+    color: white;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "X";
+}
+
+
+#nav {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #004080;
+    width: 100%;
+    margin: 0;
+    justify-content: right;
+    padding: 10px;
+    color: white;
+}
+
+
+nav a:hover {
+    text-decoration: none;
+    background-color: #fff;
+    color: #104D71;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+#nav-header {
+    color: #fff;
+    background-color: #004080;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px;
+}
+
+ul {
+    display: none;
+    margin: 5px;
+    padding-top: 10px;
+    padding: 5px;
+}
+
+.open-ul {
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+    padding: 0;
+    justify-content: right;
+
+
+}
+
+li {
+    list-style: none;
+    padding: 5px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+
+main {
+    padding: 2em;
+    width: 100%;
+}
+
+#hero {
+    text-align: center;
+    background-color: #e0e0e0;
+    padding: 2em;
+}
+
+#hero .btn {
+    background-color: #004080;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.btn {
+    color: #004080;
+    text-decoration: underline;
+}
+
+#about,
+#contact,
+#products,
+#news {
+    background-color: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+}
+
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    padding: 1em;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form textarea {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #004080;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #003060;
+}
+
+figure {
+    justify-content: center;
+}
+
+.image-gallery,
+.news-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+/* changed */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.image-gallery img, .product-item img,
+.news-item img {
+    max-width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* changed */
+.image-gallery img {
+    width: 400px;
+    height: 300px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* changed */
+
+.image-gallery .caption,
+.product-item .caption,
+.news-item .caption {
+    text-align: center;
+    margin-top: 5px;
+}
+
+h2 {
+    justify-content: center;
+    text-decoration: underline;
+    text-align: center;
+}
+
+/* Add this style to create boxes around each news item */
+#news .news-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#news .news-item,
+.product-item {
+    flex: 1 1 calc(33.33% - 20px);
+    /* Adjust width for responsiveness */
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+#news .news-item h2 {
+    margin-top: 0;
+}
+
+#news .news-item small {
+    display: block;
+    margin-top: 10px;
+    color: #888;
+}
+
+
+
+/* ----------------------------------------------------------- */
+
+@media screen and (min-width: 700px) {
+
+    #menu {
+        display: none;
+    }
+
+    #nav {
+        background-color: #004080;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        float: right;
+        margin: 0;
+        text-align: center;
+        padding: 0;
+        min-width: 35%;
+        justify-content: space-between;
+    }
+    
+    
+    nav a:hover {
+        text-decoration: none;
+        background-color: #fff;
+        color: #004080;
+        cursor: pointer;
+        border-radius: 15px;
+    }
+    
+    #nav-header {
+        color: #fff;
+        background-color: #104D71;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+        margin: 10px;
+    }
+    
+    .open-ul {
+        display: block;
+        margin: auto;
+        padding-top: 10px;
+        padding: 5px;
+    }
+    
+    li {
+        list-style: none;
+        padding: 20px;
+    }
+    
+    li:hover {
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+
+    footer {
+        background-color: #004080;
+        color: white;
+        text-align: center;
+        position:fixed;
+        padding: 1em;
+        width: 100%;
+    }
+
+    table {
+        width: auto;
+    }
+
+    #news .news-item, .product-list {
+        flex: 1 1 calc(50% - 20px); /* Adjust width for smaller screens */
+    }
+
+    #news .news-item, .product-list {
+        flex: 1 1 calc(100% - 20px); /* Adjust width for mobile screens */
+    }
+
+    #news .news-list, .product-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
